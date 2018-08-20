@@ -27,5 +27,6 @@ public class SwipeRefreshActivity extends AppCompatActivity {
                 },1000);
             }
         });
+        int a;
     }
 }
