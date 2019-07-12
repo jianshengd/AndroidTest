@@ -2,6 +2,7 @@ package com.jianshengd.room_db.newdb;
 
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
+import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.migration.Migration;
@@ -44,7 +45,7 @@ public abstract class AcquireDatabase extends RoomDatabase {
                             .addMigrations(new Migration(5,6) {
                                 @Override
                                 public void migrate(@NonNull SupportSQLiteDatabase database) {
-
+                                    //5-6 ，数据库框架移至ROOM。此处虽然是空函数，但是必须存在
                                 }
                             })
                             //允许主线程进行数据库操作

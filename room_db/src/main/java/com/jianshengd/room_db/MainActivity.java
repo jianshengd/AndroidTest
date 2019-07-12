@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             oldCommonDao.insert(scriptResult);
 
             OldWater water = new OldWater();
-            water.setAmount(1L);
+            water.setSignatureFlag(true);
             oldCommonDao.insert(water);
         });
         findViewById(R.id.btn_test).setOnClickListener(v->{
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     + newCommonDao.findReverseWater().getAmount()
                     + newCommonDao.findEmvFail().getAmount()
                     + newCommonDao.findScript().getAmount()
-                    + newCommonDao.findWater().getAmount()
+                    + newCommonDao.findWater().getSignatureFlag()
                     ;
             tvInfo.setText(info);
         });

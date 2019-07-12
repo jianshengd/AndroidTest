@@ -1,0 +1,651 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 6,
+    "identityHash": "87a38eda93c2a92b4a599b94d6f6944f",
+    "entities": [
+      {
+        "tableName": "T_BLACK_CARD",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `CARD_BIN` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardBin",
+            "columnName": "CARD_BIN",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "T_Card_BIN_A",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `CARD_BIN` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardBin",
+            "columnName": "CARD_BIN",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "T_Card_BIN_B",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `CARD_BIN` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardBin",
+            "columnName": "CARD_BIN",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "T_Card_BIN_C",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `CARD_BIN` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardBin",
+            "columnName": "CARD_BIN",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "T_SETTLEMENT",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `TYPE` TEXT, `ORGANIZATION` INTEGER, `AMOUNT` INTEGER, `NUM` INTEGER, `DISCOUNTAMT` INTEGER, `ACTUALAMT` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "TYPE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "organization",
+            "columnName": "ORGANIZATION",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "AMOUNT",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "num",
+            "columnName": "NUM",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "discountAmt",
+            "columnName": "DISCOUNTAMT",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "actualAmt",
+            "columnName": "ACTUALAMT",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "T_USER",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `USER_NO` TEXT, `PASSWORD` TEXT, `USER_TYPE` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userNo",
+            "columnName": "USER_NO",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "PASSWORD",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userType",
+            "columnName": "USER_TYPE",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "T_REVERSE_WATER",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `TRANS_TYPE` INTEGER, `TRANS_ATTR` INTEGER, `PAN` TEXT, `PROC_CODE` TEXT, `AMOUNT` INTEGER, `TRACE` TEXT, `FIELD_59` TEXT, `EXP_DATE` TEXT, `INPUT_MODE` TEXT, `CARD_SERIAL_NO` TEXT, `SERVER_CODE` TEXT, `OLD_AUTH_CODE` TEXT, `RESPONSE` TEXT, `INPUT_MODE_FOR_TRANS_IN` TEXT, `CURRENCY_CODE` TEXT, `FIELD_55` TEXT, `FIELD_60` TEXT, `FIELD_61` TEXT, `ADDITION` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transType",
+            "columnName": "TRANS_TYPE",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transAttr",
+            "columnName": "TRANS_ATTR",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pan",
+            "columnName": "PAN",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "procCode",
+            "columnName": "PROC_CODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "AMOUNT",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "trace",
+            "columnName": "TRACE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "field59",
+            "columnName": "FIELD_59",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "expDate",
+            "columnName": "EXP_DATE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inputMode",
+            "columnName": "INPUT_MODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardSerialNo",
+            "columnName": "CARD_SERIAL_NO",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "serverCode",
+            "columnName": "SERVER_CODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "oldAuthCode",
+            "columnName": "OLD_AUTH_CODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "response",
+            "columnName": "RESPONSE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inputModeForTransIn",
+            "columnName": "INPUT_MODE_FOR_TRANS_IN",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currencyCode",
+            "columnName": "CURRENCY_CODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "field55",
+            "columnName": "FIELD_55",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "field60",
+            "columnName": "FIELD_60",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "field61",
+            "columnName": "FIELD_61",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "addition",
+            "columnName": "ADDITION",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "T_EMV_FIAL_WATER",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `TRANS_TYPE` INTEGER, `TRANS_ATTR` INTEGER, `EMV_STATUS` INTEGER, `PAN` TEXT, `AMOUNT` INTEGER, `TRACE` TEXT, `TIME` TEXT, `DATE` TEXT, `EXP_DATE` TEXT, `INPUT_MODE` TEXT, `CARD_SERIAL_NO` TEXT, `TRACK2` TEXT, `TRACK3` TEXT, `BATCH_NUM` TEXT, `OPER` TEXT, `INTER_ORG` TEXT, `BATCH_UP_FLAG` INTEGER, `EMV_ADDITION` TEXT, `ADDITION` TEXT, `EMV_AUTH_RESP` TEXT, `TVR` TEXT, `TSI` TEXT, `FIELD55` TEXT, `CURRENCY` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transType",
+            "columnName": "TRANS_TYPE",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transAttr",
+            "columnName": "TRANS_ATTR",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "emvStatus",
+            "columnName": "EMV_STATUS",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pan",
+            "columnName": "PAN",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "AMOUNT",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "trace",
+            "columnName": "TRACE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "time",
+            "columnName": "TIME",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "DATE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "expDate",
+            "columnName": "EXP_DATE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inputMode",
+            "columnName": "INPUT_MODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardSerialNo",
+            "columnName": "CARD_SERIAL_NO",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "track2",
+            "columnName": "TRACK2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "track3",
+            "columnName": "TRACK3",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "batchNum",
+            "columnName": "BATCH_NUM",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "oper",
+            "columnName": "OPER",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "interOrg",
+            "columnName": "INTER_ORG",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "batchUpFlag",
+            "columnName": "BATCH_UP_FLAG",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "emvAddition",
+            "columnName": "EMV_ADDITION",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "addition",
+            "columnName": "ADDITION",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "emvAuthResp",
+            "columnName": "EMV_AUTH_RESP",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tvr",
+            "columnName": "TVR",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tsi",
+            "columnName": "TSI",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "field55",
+            "columnName": "FIELD55",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currency",
+            "columnName": "CURRENCY",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "T_SCRIPT_RESULT",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `TRANS_TYPE` INTEGER, `TRANS_ATTR` INTEGER, `PAN` TEXT, `PROC_CODE` TEXT, `AMOUNT` INTEGER, `INPUT_MODE` TEXT, `CARD_SERIAL_NO` TEXT, `SERVER_CODE` TEXT, `ACQ_CENTER_CODE` TEXT, `REF_NUM` TEXT, `AUTH_CODE` TEXT, `CURRENCY` TEXT, `FIELD_55` TEXT, `FIELD_60` TEXT, `FIELD_61` TEXT, `ADDITION` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transType",
+            "columnName": "TRANS_TYPE",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "transAttr",
+            "columnName": "TRANS_ATTR",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pan",
+            "columnName": "PAN",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "procCode",
+            "columnName": "PROC_CODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "AMOUNT",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "inputMode",
+            "columnName": "INPUT_MODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardSerialNo",
+            "columnName": "CARD_SERIAL_NO",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "serverCode",
+            "columnName": "SERVER_CODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "acqCenterCode",
+            "columnName": "ACQ_CENTER_CODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "refNum",
+            "columnName": "REF_NUM",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "authCode",
+            "columnName": "AUTH_CODE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currency",
+            "columnName": "CURRENCY",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "field55",
+            "columnName": "FIELD_55",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isoField60",
+            "columnName": "FIELD_60",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "field61",
+            "columnName": "FIELD_61",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "addition",
+            "columnName": "ADDITION",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "t_water",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `SIGNATURE_FLAG` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "ID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "signatureFlag",
+            "columnName": "SIGNATURE_FLAG",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"87a38eda93c2a92b4a599b94d6f6944f\")"
+    ]
+  }
+}
