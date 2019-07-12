@@ -1,1 +1,1 @@
-include ':app', ':glide', ':v-layout', ':ndk', ':kotline'
+include ':app', ':glide', ':v-layout', ':ndk', ':kotline', ':room_db'
