@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 6,
-    "identityHash": "87a38eda93c2a92b4a599b94d6f6944f",
+    "identityHash": "69a96514c1035e3cfe3513174fc7b627",
     "entities": [
       {
         "tableName": "T_BLACK_CARD",
@@ -618,7 +618,7 @@
       },
       {
         "tableName": "t_water",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `SIGNATURE_FLAG` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ID` INTEGER PRIMARY KEY AUTOINCREMENT, `ELEC_SIGN_FLAG` INTEGER, `NO_ELEC_SIGN_FLAG` INTEGER, `NO_PIN_FLAG` INTEGER, `SIGNATURE_FLAG` TEXT, `NO_SIGN_FLAG` TEXT, `NO_PSW_FLAG` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -627,8 +627,38 @@
             "notNull": false
           },
           {
+            "fieldPath": "elecSignFlag",
+            "columnName": "ELEC_SIGN_FLAG",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noElecSignFlag",
+            "columnName": "NO_ELEC_SIGN_FLAG",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noPinFlag",
+            "columnName": "NO_PIN_FLAG",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
             "fieldPath": "signatureFlag",
             "columnName": "SIGNATURE_FLAG",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noSignFlag",
+            "columnName": "NO_SIGN_FLAG",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noPswFlag",
+            "columnName": "NO_PSW_FLAG",
             "affinity": "TEXT",
             "notNull": false
           }
@@ -645,7 +675,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"87a38eda93c2a92b4a599b94d6f6944f\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"69a96514c1035e3cfe3513174fc7b627\")"
     ]
   }
 }

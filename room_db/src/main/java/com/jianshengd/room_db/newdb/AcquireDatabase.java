@@ -2,12 +2,11 @@ package com.jianshengd.room_db.newdb;
 
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
-import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
-import android.arch.persistence.room.migration.Migration;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.jianshengd.room_db.newdb.dao.NewCommonDao;
 import com.jianshengd.room_db.newdb.entity.BlackCard;
@@ -19,7 +18,6 @@ import com.jianshengd.room_db.newdb.entity.ReverseWater;
 import com.jianshengd.room_db.newdb.entity.ScriptResult;
 import com.jianshengd.room_db.newdb.entity.Settlement;
 import com.jianshengd.room_db.newdb.entity.User;
-import com.jianshengd.room_db.newdb.entity.Water;
 
 /**
  * 数据库
@@ -28,7 +26,8 @@ import com.jianshengd.room_db.newdb.entity.Water;
  * @date 2019/6/24 18:30
  */
 @Database(entities = {BlackCard.class, CardBinA.class, CardBinB.class, CardBinC.class,
-        Settlement.class, User.class, ReverseWater.class, EmvFailWater.class, ScriptResult.class, Water.class}, version = 6)
+        Settlement.class, User.class, ReverseWater.class, EmvFailWater.class,
+        ScriptResult.class}, version = 6)
 public abstract class AcquireDatabase extends RoomDatabase {
     /**数据库名称*/
     private final static String DB_NAME = "test.db";
@@ -42,18 +41,14 @@ public abstract class AcquireDatabase extends RoomDatabase {
                 if (instance == null){
                     instance =  Room.databaseBuilder(context, AcquireDatabase.class, DB_NAME)
                             //添加数据库变动迁移
-                            .addMigrations(new Migration(5,6) {
-                                @Override
-                                public void migrate(@NonNull SupportSQLiteDatabase database) {
-                                    //5-6 ，数据库框架移至ROOM。此处虽然是空函数，但是必须存在
-                                }
-                            })
+                            .addMigrations(DbUpdater.MIGRATION5_6)
                             //允许主线程进行数据库操作
                             .allowMainThreadQueries()
                             .addCallback(new RoomDatabase.Callback() {
                                 @Override
                                 public void onCreate(@NonNull SupportSQLiteDatabase supportDb) {
                                     super.onCreate(supportDb);
+                                    Log.e("db","----------------------");
                                 }
                             })
                             .build();

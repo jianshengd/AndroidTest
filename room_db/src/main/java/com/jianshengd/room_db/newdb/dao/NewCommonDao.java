@@ -12,7 +12,6 @@ import com.jianshengd.room_db.newdb.entity.ReverseWater;
 import com.jianshengd.room_db.newdb.entity.ScriptResult;
 import com.jianshengd.room_db.newdb.entity.Settlement;
 import com.jianshengd.room_db.newdb.entity.User;
-import com.jianshengd.room_db.newdb.entity.Water;
 
 /**
  * Created by Administrator on 2019/7/11
@@ -50,6 +49,5 @@ public interface NewCommonDao {
     @Query("SELECT * FROM t_script_result ORDER BY id DESC LIMIT 1")
     ScriptResult findScript();
 
-    @Query("SELECT * FROM t_water ORDER BY id DESC LIMIT 1")
-    Water findWater();
+
 }

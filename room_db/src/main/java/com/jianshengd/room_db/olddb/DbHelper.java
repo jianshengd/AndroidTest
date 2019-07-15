@@ -15,7 +15,6 @@ import com.jianshengd.room_db.olddb.entity.OldReverseWater;
 import com.jianshengd.room_db.olddb.entity.OldScriptResult;
 import com.jianshengd.room_db.olddb.entity.OldSettlement;
 import com.jianshengd.room_db.olddb.entity.OldUser;
-import com.jianshengd.room_db.olddb.entity.OldWater;
 
 import java.lang.reflect.Field;
 
@@ -61,7 +60,6 @@ public class DbHelper extends SQLiteOpenHelper {
             db.execSQL(getCreateTableSql(OldReverseWater.class));
             db.execSQL(getCreateTableSql(OldScriptResult.class));
             db.execSQL(getCreateTableSql(OldEmvFailWater.class));
-            db.execSQL(getCreateTableSql(OldWater.class));
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -6,7 +6,6 @@ import android.widget.TextView;
 
 import com.jianshengd.room_db.newdb.AcquireDatabase;
 import com.jianshengd.room_db.newdb.dao.NewCommonDao;
-import com.jianshengd.room_db.newdb.entity.ReverseWater;
 import com.jianshengd.room_db.olddb.DbHelper;
 import com.jianshengd.room_db.olddb.dao.OldCommonDao;
 import com.jianshengd.room_db.olddb.entity.OldBlackCard;
@@ -18,7 +17,7 @@ import com.jianshengd.room_db.olddb.entity.OldReverseWater;
 import com.jianshengd.room_db.olddb.entity.OldScriptResult;
 import com.jianshengd.room_db.olddb.entity.OldSettlement;
 import com.jianshengd.room_db.olddb.entity.OldUser;
-import com.jianshengd.room_db.olddb.entity.OldWater;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,9 +64,6 @@ public class MainActivity extends AppCompatActivity {
             scriptResult.setAmount(999L);
             oldCommonDao.insert(scriptResult);
 
-            OldWater water = new OldWater();
-            water.setSignatureFlag(true);
-            oldCommonDao.insert(water);
         });
         findViewById(R.id.btn_test).setOnClickListener(v->{
             NewCommonDao newCommonDao = AcquireDatabase.getInstance(this).newCommonDao();
@@ -81,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
                     + newCommonDao.findReverseWater().getAmount()
                     + newCommonDao.findEmvFail().getAmount()
                     + newCommonDao.findScript().getAmount()
-                    + newCommonDao.findWater().getSignatureFlag()
                     ;
+
             tvInfo.setText(info);
         });
     }
